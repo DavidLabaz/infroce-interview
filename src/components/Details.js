@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default class Product extends React.Component {
+export default class Details extends React.Component {
 
     state = {
         loading: true,
@@ -30,7 +30,6 @@ export default class Product extends React.Component {
                             <span className='prod-name'>{this.state.product.name}</span>
                             <span className='prod-desc'>{this.state.product.description}</span>
                             <span className='prod-color'>color: {this.state.product.color}</span>
-                            <span className='prod-size'>color: {this.state.product.color}</span>
                             <span className='prod-weight'>weight: {this.state.product.weight}g</span>
                             <span className='prod-count'>avaible: {this.state.product.count} units</span>
                             <span className='prod-comments'>comments: <br/><br/> {this.state.product.comments} </span>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class  extends React.Component {
+export default class AddProduct extends React.Component {
 
     state = {
         name: '',
@@ -31,7 +31,7 @@ export default class  extends React.Component {
             <div className="modal">
 
                 <div className="modal-content">
-                    <h1>{this.props.data ? '' : 'Add Product'}</h1>
+                    <h1>{this.props.data ? '' : 'Add Details'}</h1>
                     <div className='input'>
                         <label>Name</label>
                         <input onChange={this.nameChange} value={this.state.name} type="text"/>
@@ -43,7 +43,7 @@ export default class  extends React.Component {
                     </div>
                     <div className='input'>
                         <label>Count</label>
-                        <input onChange={this.countChange} value={this.state.count} type="number"/>
+                        <input onChange={this.countChange} value={this.state.count} type="number" min='0'/>
                     </div>
                     <footer>
                         <button onClick={this.closePopup}>Cancel</button>
@@ -55,3 +55,4 @@ export default class  extends React.Component {
         )
     }
 }
+
